@@ -12,17 +12,23 @@ h2 {
   margin: 0;
 }
 
-.artigo {
+.section {
   background-color: #bebebe;
   margin: 5px 20px 0 20px;
-  padding: 0 10px 1px 10px;
-  /* border: 1px solid; */
+  padding: 2px 10px 1px 10px;
 }
 
 .artigo-curto {
-  background-color: #bebebe;
-  max-width: 20rem;
-  margin: 5px auto;
+  background-color: #d6d6d6;
+  margin: 5px 5px;
   padding: 0 10px 1px 10px;
   border: 1px solid;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-template-columns-3 {
+	grid-template-columns: 1fr 1fr 1fr;
 }
