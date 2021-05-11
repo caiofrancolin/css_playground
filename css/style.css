@@ -4,11 +4,25 @@ body {
 
 h1 {
   background-color: #ffffff;
-  color: #7830a8;
+  color: #3d3741;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
 }
 
 .artigo {
   background-color: #bebebe;
-  margin: 0 15px;
-  padding: 1px 10px 1px 10px;
+  margin: 5px 20px 0 20px;
+  padding: 0 10px 1px 10px;
+  /* border: 1px solid; */
+}
+
+.artigo-curto {
+  background-color: #bebebe;
+  max-width: 20rem;
+  margin: 5px auto;
+  padding: 0 10px 1px 10px;
+  border: 1px solid;
 }
