@@ -40,3 +40,11 @@ ol {
   list-style: upper-roman;
   margin-left: 20px;
 }
+
+.conteudo {
+  margin-left: 1rem;
+}
+
+#titulo-principal {
+  margin-left: 5rem;
+}
