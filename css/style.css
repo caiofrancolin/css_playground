@@ -40,13 +40,40 @@ ol {
 
 /* Explicando Cascade e especificidade */
 
+/* 0 - 2 - 0 */
+.titulo.titulo-pagina {
+  color: purple;
+}
+
+/* 1 - 0 - 0 
+Não usar Id no CSS*/
+#titulo-principal {
+  color: aquamarine;
+}
+
+/* 0 - 1 - 0 */
 .titulo-pagina {
   font-size: 5rem;
   border: 5px solid red;
   color: red;
+  margin-left: 4rem;
 }
 
+/*0 - 1 - 0 = quando empatado na especificidade ganha quem está mais abaixo*/
 .titulo {
   border-style: dashed;
+  margin-left: 0;
   color: green;
 }
+
+/* 1 - 0 - 0 - 1 */
+h1 {
+  color: blue;
+  /* color: blue !important; */
+}
+
+/*
+Regra de especificidade:
+1 (peso1000000 - !important) - 0 (peso1000 - Id) - 0 (peso10 - Classe) - 0 (peso1 - Tag)
+!important sempre ganha
+*/
