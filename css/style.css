@@ -71,9 +71,62 @@ h1 {
   color: blue;
   /* color: blue !important; */
 }
-
 /*
 Regra de especificidade:
 1 (peso1000000 - !important) - 0 (peso1000 - Id) - 0 (peso10 - Classe) - 0 (peso1 - Tag)
 !important sempre ganha
 */
+
+.titulo-generico {
+  font-size: 40px;  
+  color: red;
+}
+
+.container-exemplo > .titulo-generico {
+  font-size: 60px;  
+  color: black;
+}
+
+.meu-link {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+/* Ativado quando o mouse está em cima */
+.meu-link:hover {
+  font-size: 40px;
+  background-color: gray;
+}
+
+/* neste caso é a cor antes do link ter sido visitado */
+.meu-link:link {
+  color: green;
+} 
+
+/* neste caso é a cor do link após ter sido visitado */
+.meu-link:visited {
+  color: rgb(185, 138, 8);
+}
+
+/* Valido ao clicar */
+.meu-link:active {
+  font-size: 60px;
+  color: red;
+}
+
+/* Valido ao selecionar o item */
+.meu-link:focus {
+  font-size: 60px;
+  color: purple;
+}
+
+.meu-input {
+  background-color: gray;
+  font-size: 50px;
+  color: white;
+}
+
+.meu-input:focus {
+  background-color: white;
+  color: black;
+}
