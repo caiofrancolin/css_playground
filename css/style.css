@@ -11,13 +11,13 @@ p {
   color: #ffffff;
 }
 
-span {
+/* span {
   font-size: 40px;
   font-family: "Comic Sans MS";
   color: #ffff00;
   text-decoration: underline;
   text-transform: uppercase;
-}
+} */
 
 ul {
   font-size: 40px;
@@ -139,6 +139,8 @@ Regra de especificidade:
   border: 2px dashed purple;
   background-color: gray;
   margin-bottom: 20px;
+  display: inline-block;
+  font-size: 30px;
 }
 
 .menu-item:last-child {
@@ -150,7 +152,7 @@ Regra de especificidade:
 }
 
 .menu-item:nth-child(3) {
-  color: green;
+  background-color: green;
 }
 
 .menu-item:nth-child(n+2) {
@@ -161,3 +163,47 @@ Regra de especificidade:
   font-size: 80px;
   background-color: red;
 }
+
+.bloco-inicial {
+  font-size: 50px;
+  background-color: orange;
+  margin-bottom: 20px;
+  display: block;
+  width: 600px;
+}
+
+.span-inicial {
+  font-size: 40px;
+  font-family: "Arial, sans-serif";
+  color: yellow;
+  text-decoration: underline;
+  text-transform: uppercase;
+  /*display: inline; /* por padrão span é inline */
+  display: inline-block;
+  width: 150px; /* ignorado por elemento inline */
+  height: 50px; /* ignorado por elemento inline */
+  margin-top: 50px; /* ignorado por elemento inline */
+  margin-left: 40px; /* ignorado por elemento inline */
+  background-color: gray;
+}
+
+.bloco-escondido {
+  display: none;
+}
+
+/*
+elementos default block
+sempre vão quebrar uma linha ao final
+div
+p
+li
+*/
+
+/*
+elementos default inline
+-span
+-a
+-strong
+-em
+Não recebe botton heim top
+*/
