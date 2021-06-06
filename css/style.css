@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -206,4 +210,41 @@ elementos default inline
 -strong
 -em
 Não recebe botton heim top
+*/
+
+.box {
+  background-color: #0000ff;
+  width: 100px;
+  /* height: 100px; Eviar o uso de height ao máximo */
+  /* border: 10px solid green; */
+  border-top: 10px solid green;
+  border-bottom: 10px dashed green;
+
+  /*
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  padding: 20px 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  
+  padding: 10px 20px 30px 40px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+  */
+
+  padding: 10px;
+  margin: 10px;
+}
+
+/*
+box-sizing: border-box; respeita o tamanho do box colocando padding e boder para dentro
+box-sizing: content-box; mantem o width e height e soma as margens
 */
