@@ -2,18 +2,26 @@
   box-sizing: border-box;
 }
 
-h2 {
+body {
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   text-align: center;
   border: 3px solid #0000ff;
   width: 50%;
-}
+} */
 
-p {
+/* p {
   background-color: #000000;
   color: #ffffff;
-}
+} */
 
 /* span {
   font-size: 40px;
@@ -82,12 +90,12 @@ Regra de especificidade:
 */
 
 .titulo-generico {
-  font-size: 40px;  
+  font-size: 40px;
   color: red;
 }
 
 .container-exemplo > .titulo-generico {
-  font-size: 60px;  
+  font-size: 60px;
   color: black;
 }
 
@@ -105,7 +113,7 @@ Regra de especificidade:
 /* neste caso é a cor antes do link ter sido visitado */
 .meu-link:link {
   color: green;
-} 
+}
 
 /* neste caso é a cor do link após ter sido visitado */
 .meu-link:visited {
@@ -159,7 +167,7 @@ Regra de especificidade:
   background-color: green;
 }
 
-.menu-item:nth-child(n+2) {
+.menu-item:nth-child(n + 2) {
   font-weight: bold;
 }
 
@@ -248,3 +256,116 @@ Não recebe botton heim top
 box-sizing: border-box; respeita o tamanho do box colocando padding e boder para dentro
 box-sizing: content-box; mantem o width e height e soma as margens
 */
+
+.wrapper {
+  display: block; /* DIV é diplay block por padrão */
+  background-color: gray;
+  font-size: 1.5rem;
+  width: 40rem;
+  margin: 0 auto;
+}
+
+.wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.wrapper p {
+  margin-top: 0;
+}
+
+.wrapper .imagem-principal-fl {
+  float: left;
+  /* border: 3px solid magenta; */
+  /* margin-right: 10px; */
+  /* margin-bottom: 10px; */
+  margin: 0 20px 10px 0;
+}
+
+/* .wrapper .p-clear {
+  clear: both;
+} */
+
+.wrapper .imagem-principal-fr {
+  float: right;
+}
+
+.wrapper-2 {
+  background-color: rgb(202, 172, 132);
+  font-size: 1.5rem;
+  width: 56rem;
+  margin: 20px auto;
+}
+
+.wrapper-2::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.box-1 {
+  width: 33%;
+  height: 200px;
+}
+
+.red {
+  background-color: red;
+  float: right;
+}
+
+.blue {
+  background-color: blue;
+  float: right;
+}
+
+.green {
+  background-color: green;
+  float: right;
+}
+
+.wrapper-3 {
+  background-color: rgb(202, 172, 132);
+  font-size: 1.5rem;
+  width: 56rem;
+  margin: 20px auto;
+}
+
+.wrapper-3::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.servico {
+  width: 31%;
+  border: 1px solid blue;
+  float: left;
+  min-height: 200px;
+  margin: 0 1%;
+  padding: 0 1%;
+}
+
+.wrapper-4 {
+  border: 5px solid blue;
+  padding: 20px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.filho {
+  position: absolute;
+  /* 
+  relative = block
+  absolute = inline-block relação com o parente se tiver relative se não vai buscar o relative acima mesmo que tenha que ir até o body
+  fixed = sempre fixo a partir do começo da tela
+  position passa a controlar as properts
+  top
+  left
+  right
+  botton
+   */
+  background-color: red;
+  padding: 20px;
+  top: 20px;
+}
