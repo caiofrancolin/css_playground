@@ -369,3 +369,30 @@ box-sizing: content-box; mantem o width e height e soma as margens
   padding: 20px;
   top: 20px;
 }
+
+.wrapper-5 {
+  width: 50%;
+}
+
+.resizable-image {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media (max-width: 760px) {
+  body {
+    background-color: #0000ff;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-color: green;
+  }
+}
